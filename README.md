@@ -28,8 +28,9 @@ http://localhost:8000
 ```
 
 **Demo Credentials:**
-- Email: `demo@thyeshan.com`
-- Password: `demo123`
+- Email: `lim@yahoo.com`
+- Password: `123`
+- User: `qwe`
 
 ## 💻 Features Implemented
 
