@@ -41,10 +41,14 @@ if ($submit!="")
         
         // Check if we're using mock database or real database
         if ($conn && !isset($GLOBALS['use_mock_db'])) {
-            // Real database
-            $sql_check = "SELECT * FROM members WHERE email = '$uemail'";
-            $checked = mysqli_query($conn, $sql_check);
+            // Real database - Use prepared statements to prevent SQL injection
+            $sql_check = "SELECT * FROM members WHERE email = ?";
+            $stmt_check = mysqli_prepare($conn, $sql_check);
+            mysqli_stmt_bind_param($stmt_check, 's', $uemail);
+            mysqli_stmt_execute($stmt_check);
+            $checked = mysqli_stmt_get_result($stmt_check);
             $duplicate = mysqli_num_rows($checked);
+
             if ($duplicate >= 1)
             {
                 echo ("Duplicate Email");
@@ -54,8 +58,10 @@ if ($submit!="")
             else
             {
                 $hashed_pw= password_hash($pword, PASSWORD_BCRYPT);
-                echo $sql = "INSERT INTO members(email, memname, password, phonenum, deliveryadd, postalcode, unitno, mempic) VALUES ('$uemail','$fname','$hashed_pw','$uhp','$uaddr','$upcode','$unitno','$target')";
-                $resultpass = mysqli_query($conn,$sql);
+                $sql = "INSERT INTO members(email, memname, password, phonenum, deliveryadd, postalcode, unitno, mempic) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                $stmt = mysqli_prepare($conn, $sql);
+                mysqli_stmt_bind_param($stmt, 'ssssssss', $uemail, $fname, $hashed_pw, $uhp, $uaddr, $upcode, $unitno, $target);
+                $resultpass = mysqli_stmt_execute($stmt);
                 mysqli_close($conn); // close the database
             }
         } else {

@@ -29,17 +29,19 @@
             {
                 // Check if we're using mock database or real database
                 if ($conn && !isset($GLOBALS['use_mock_db'])) {
-                    // Real database
+                    // Real database - Use prepared statements to prevent SQL injection
                     require("../config/sql_connection.php");
-                    echo $sql_ = "INSERT orddetail(ordid, proid, qty, unitprice)
-                    SELECT ord.id, proid, qty, unitprice FROM cart ct INNER JOIN orders ord on ct.memid = ord.memid WHERE ord.id = '$ordid'";
-                    $order = mysqli_query($conn, $sql_);
+                    $sql_ = "INSERT orddetail(ordid, proid, qty, unitprice)
+                    SELECT ord.id, proid, qty, unitprice FROM cart ct INNER JOIN orders ord on ct.memid = ord.memid WHERE ord.id = ?";
+                    $stmt_order = mysqli_prepare($conn, $sql_);
+                    mysqli_stmt_bind_param($stmt_order, 's', $ordid);
+                    $order = mysqli_stmt_execute($stmt_order);
 
-                    $filter = "WHERE memid = $mid";
-                    $sql_delete = "DELETE FROM cart ".$filter;
+                    $sql_delete = "DELETE FROM cart WHERE memid = ?";
+                    $stmt_delete = mysqli_prepare($conn, $sql_delete);
+                    mysqli_stmt_bind_param($stmt_delete, 's', $mid);
+                    $order = mysqli_stmt_execute($stmt_delete);
 
-                    $order=  mysqli_query($conn, $sql_delete);
-                    
                     mysqli_close($conn);
                 } else {
                     // Mock database - simulate successful order detail insertion and cart clearing
