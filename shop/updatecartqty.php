@@ -11,9 +11,11 @@
         
         // Check if we're using mock database or real database
         if ($conn && !isset($GLOBALS['use_mock_db'])) {
-            // Real database
-            echo $sql_update = "UPDATE cart SET qty='$nqty' WHERE proid ='$proid' ";
-            $nqtyupdate  = mysqli_query($conn, $sql_update);
+            // Real database - Use prepared statements to prevent SQL injection
+            $sql_update = "UPDATE cart SET qty = ? WHERE proid = ?";
+            $stmt_update = mysqli_prepare($conn, $sql_update);
+            mysqli_stmt_bind_param($stmt_update, 'ss', $nqty, $proid);
+            $nqtyupdate = mysqli_stmt_execute($stmt_update);
             mysqli_close($conn);
         } else {
             // Mock database - simulate successful update
@@ -28,9 +30,11 @@
         
         // Check if we're using mock database or real database
         if ($conn && !isset($GLOBALS['use_mock_db'])) {
-            // Real database
-            echo $sql_delete = "DELETE FROM cart WHERE proid= '$proid' ";
-            $prod_delete = mysqli_query($conn, $sql_delete);
+            // Real database - Use prepared statements to prevent SQL injection
+            $sql_delete = "DELETE FROM cart WHERE proid = ?";
+            $stmt_delete = mysqli_prepare($conn, $sql_delete);
+            mysqli_stmt_bind_param($stmt_delete, 's', $proid);
+            $prod_delete = mysqli_stmt_execute($stmt_delete);
             mysqli_close($conn);
         } else {
             // Mock database - simulate successful deletion

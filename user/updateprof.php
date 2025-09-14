@@ -18,9 +18,11 @@
             
             // Check if we're using mock database or real database
             if ($conn && !isset($GLOBALS['use_mock_db'])) {
-                // Real database
-                $sql_update = "UPDATE members SET email='$email',memname='$memname',password='$password',phonenum='$phonenum',deliveryadd='$deliveryadd',postalcode='$postalcode',unitno='$unitno' WHERE id= '$uid'";
-                $result= mysqli_query($conn,$sql_update);
+                // Real database - Use prepared statements to prevent SQL injection
+                $sql_update = "UPDATE members SET email = ?, memname = ?, password = ?, phonenum = ?, deliveryadd = ?, postalcode = ?, unitno = ? WHERE id = ?";
+                $stmt = mysqli_prepare($conn, $sql_update);
+                mysqli_stmt_bind_param($stmt, 'ssssssss', $email, $memname, $password, $phonenum, $deliveryadd, $postalcode, $unitno, $uid);
+                $result = mysqli_stmt_execute($stmt);
                 mysqli_close($conn);
             } else {
                 // Mock database - simulate successful update

@@ -17,9 +17,12 @@
         
         // Check if we're using mock database or real database
         if ($conn && !isset($GLOBALS['use_mock_db'])) {
-            // Real database
-            $sql= "SELECT * FROM orddetail odt INNER JOIN product prd on odt.proid = prd.id INNER JOIN orders ord on odt.ordid = ord.id WHERE ord.memid ='$uid'  ORDER BY ord.orddate DESC ";
-            $hist = mysqli_query($conn, $sql);
+            // Real database - Use prepared statements to prevent SQL injection
+            $sql= "SELECT * FROM orddetail odt INNER JOIN product prd on odt.proid = prd.id INNER JOIN orders ord on odt.ordid = ord.id WHERE ord.memid = ? ORDER BY ord.orddate DESC ";
+            $stmt = mysqli_prepare($conn, $sql);
+            mysqli_stmt_bind_param($stmt, 's', $uid);
+            mysqli_stmt_execute($stmt);
+            $hist = mysqli_stmt_get_result($stmt);
             mysqli_close($conn);
         } else {
             // Mock database - create mock order history data
