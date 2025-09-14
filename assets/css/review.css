@@ -1,0 +1,55 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#reviewflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#reviewshow{
+    height: 370px;
+    overflow-y: scroll;
+    width: 65%;
+}
+
+#reviewhead{
+    text-align: center;
+    font-size: 1.5em;
+    border-bottom: 2px solid black;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#reviewform{
+    margin-top: 10px;
+    background-color: #C73131;
+    padding: 10px;
+    color: white;
+}
+
+#nameinput{
+    width: 200px;
+}
+
+#getreviews p{
+    font-size: 1.3em;
+    padding: 5px;
+}
+
+#reviewimg{
+    height: 20px;
+}
+
+hr{
+    height: 1px;
+    background-color: black;
+}

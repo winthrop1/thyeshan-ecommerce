@@ -1,0 +1,93 @@
+main{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#prodflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#prod_rel{
+    position: relative;
+    left: 80px;
+    width: 150px;
+}
+
+#prod_catstick{
+    position: sticky;
+    top: 240px;
+    /* border: 2px solid black; */
+}
+
+.procatTXT{
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+button.procatBTN
+{
+    border: none;
+    background-color: transparent;
+}
+
+.pro_cat li{
+    font-size: 1.5em;
+    padding: 5px;
+}
+
+#pro_grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px auto;
+    max-width: 1200px;
+    width: 80%;
+    gap: 30px;
+    padding: 20px;
+}
+
+.prosel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.prosel:hover{
+    box-sizing: border-box;
+}
+
+.prosel img{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.prosel p{
+    text-align: center;
+}
+
+p#proname{
+    font-weight: bold;
+    font-size: 1.3em;
+    width: 70%;
+    margin: 0 auto;
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p#procost{
+    font-size: 1.2em;
+}
+
+#atcHL p{
+    font-size: 1.3em;
+    color: blue;
+    position: relative;
+    top: 10px;
+    padding: 5px;
+    text-align: left;
+}

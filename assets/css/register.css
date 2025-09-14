@@ -1,0 +1,55 @@
+/* #regForm{
+    text-align: center;
+    font-size: 1.8em;
+}
+
+form label, form input{
+    margin-top: 20px;
+}
+
+form input{
+    padding: 10px;
+}
+
+.regLBL{
+    text-align: justify;
+} */
+
+#reg_ban{
+    background-image: url(../images/register_ban-removebg-preview.png);
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    background-color: #C73131;
+    margin-top: 20px;
+}
+
+/* #register{
+    background-color: white;
+} */
+
+#regForm{
+    font-size: 1.6em;
+    text-align: center;
+}
+
+#reginput{
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #C73131;
+    color: white;
+}
+
+input#address{
+    height: 40px;
+}
+
+#invalidreg{
+    color: red;
+}
+
+.stt{
+    text-align: center;
+}

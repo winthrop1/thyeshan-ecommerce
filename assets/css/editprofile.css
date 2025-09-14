@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#updateform{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: lightblue;
+    padding: 10px;
+}
+
+#editprof p{
+    font-size: 1.2em;
+}
+
+#editprofimg{
+    align-self: center;
+}
+
+#editprofimg img{
+    width: 350px;
+    height: 350px;
+    border-radius: 300px;
+}
+
+#save{
+    border-radius: 20px;
+    padding: 8px;
+    background-color: #C73131;
+    color: white;
+    font-size: 1.2em;
+}
+
+#updatepic{
+    border-radius: 20px;
+    padding: 8px;
+    background-color: #C73131;
+    color: white;
+    font-size: 1.2em;
+}
+

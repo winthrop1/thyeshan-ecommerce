@@ -1,0 +1,93 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#searchbox{
+    background-color: lightblue;
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#searchbox p{
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#searchTXT{
+    padding: 10px;
+}
+
+#searchBTN{
+    position: relative;
+    left: -10px;
+    top: 9px;
+}
+
+#searchBTN img {
+    width: 30px;
+    height: 30px;
+}
+
+.mySlides{
+    display: none;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.mySlides img{
+    width: 400px;
+    height: 400px;
+}
+
+.mySlides
+{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#searchprod{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 0 auto;
+}
+
+#searchgrid{
+    width: 80%;
+    text-align: center;
+}
+
+#searchgrid img{
+    width: 200px;
+    height: 200px;
+}
+
+#buttonright{
+    position: relative;
+    left: 100px;
+}
+
+#buttonleft{
+    position: relative;
+    right: 100px;
+}
+
+.button{
+    background-color: lightsteelblue;
+    font-size: 1.1em;
+    color: black;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 2px;
+}

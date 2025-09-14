@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#carttop{
+    font-size: 2em;
+    font-weight: bolder;
+    border-bottom: 1px solid black;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#cartimg img{
+    width: 200px;
+    height: 200px;
+}
+
+#cartflex{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+#cartTXT
+{
+    align-self: center;
+    width: 40%;
+}
+
+#cartname{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#cartdesc{
+    width: 70%;
+}
+
+#cartucost
+{
+    align-self: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#carttcost
+{
+    align-self: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#cartform
+{
+    align-self: center;
+}
+
+#cartnum{
+    width: 130px;
+}
+
+.cartBTN{
+    color: cornflowerblue;
+    border: none;
+    background-color: transparent;
+    font-size: 1.1em;
+}
+
+.cartBTN:hover{
+    border-bottom: 2px solid cornflowerblue;
+}
+
+#cartcal{
+    position: relative;
+    left: 70%;
+    margin-top: 10px;
+}
+
+#checkout{
+    position: relative;
+    margin-top: 10px;
+    left: 315px;
+}
+
+.cartval{
+    font-size: 1.2em;
+}
+
+#checkoutBTN{
+    background-color: #C73131;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 10px;
+}
+
+#carttotal{
+    font-weight: bold;
+}
