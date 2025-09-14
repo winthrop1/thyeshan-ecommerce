@@ -1,0 +1,232 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #d8d2d2;
+    text-decoration: none;
+}
+
+body a:link{
+    text-decoration: none;
+}
+
+body a:visited{
+    text-decoration: none;
+}
+nav{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#navtop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#nav_cs li:hover{
+    border-bottom: 2px solid blue;
+}
+
+#nav_cs{
+    display: flex;
+}
+
+#navflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+    flex-wrap: wrap;
+}
+
+#navflex li :hover{
+    border-bottom: 5px solid blue;
+}
+
+li.text{
+    margin-top: 50px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+nav li img{
+    width: 180px;
+    height: 85px;
+    margin-top: 20px;
+}
+
+li.text a{
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 28px;
+    color: black;
+}
+
+img#cart{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+img#srch{
+    width: 60px;
+    height: 60px;
+    margin-top: 30px;
+}
+
+footer{
+    background-color: #494848;
+}
+
+#footcon{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 0 auto;
+    text-decoration: none;
+    list-style-type: none;
+    margin-top: 10px ;
+    font-size: 20px;
+}
+
+#abtnav ul, #tc ul, #sm h2{
+    margin-top: 10px;
+}
+
+#smicon img{
+    width: 30px;
+    height: 30px;
+}
+
+#smicon ul{
+    display: flex;
+}
+
+#footcon a:link{
+    color: white;
+}
+
+#footcon a:visited{
+    color: white;
+}
+
+#sm img{
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+}
+
+#sm h2{
+    color: white;
+}
+
+#cpr{
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+#footcon li, #footcon p{
+    margin-top: 5px;
+}
+
+#footcon li:hover{
+    border-bottom: 2px solid lightcoral;
+    width: fit-content;
+    padding: 2px;
+}
+
+form{
+    margin-top: 10px;
+    text-align: center;
+}
+
+label#labsub{
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+form input{
+    margin: 10px;
+    padding: 5px;
+}
+
+#subscribe{
+    position: relative;
+    right: 20px;
+    padding: 5px;
+    background-color: #d30000;
+    color: white;
+}
+
+.stt{
+    color: red;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 768px) { 
+    #navlogo img{
+        width: 120px;
+        height: 50px;
+    }
+    
+    #nav_cs img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    #navflex a{
+        font-size: 1.2em;
+    }
+
+    main{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    div#cart img{
+        width: 65px;
+        height: 65px;
+    }
+
+    footer{
+        width: 100%;
+    }
+
+    #footcon{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    nav{
+        
+        width: 100%;
+    }
+    
+    #navlogo img{
+        width: 100px;
+        height: 50px;
+    }
+
+    #navtop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #navflex{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #C73131;
+        padding: 5px;
+    }
+
+    nav li{
+        text-align: center;
+    }
+}

@@ -1,0 +1,62 @@
+#prodflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#prodtxt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+} 
+
+#prodname{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#prodcat{
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+#prodcost{
+    font-size: 1.3em;
+}
+
+#prodqty{
+    align-self: center;
+}
+
+#prodnum{
+    width: 50px;
+    border: none;
+}
+
+#atc{
+    position: relative;
+    left: -25px;
+    background-color: #C73131;
+    color: white;
+}
+
+#prodimg img{
+    width: 300px;
+    height: 300px;
+}
+
+#prodsec{
+    background-color: darkgray;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#proddesc{
+    font-size: 1.3em;
+    text-align: justify;
+}

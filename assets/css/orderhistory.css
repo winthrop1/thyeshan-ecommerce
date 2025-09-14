@@ -1,0 +1,79 @@
+#hordhist{
+    font-size: 1.5em;
+    border-bottom: 2px solid black;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-weight: bold;
+    
+}
+
+#ordersel{
+    display: flex;
+    margin-top: 20px;
+}
+
+#histdate{
+    margin-right: 10px;   
+}
+
+#ordstat{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#histpg{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#histimg{
+    width: 150px;
+    height: 150px;
+}
+
+#histflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+
+#histTXT{
+    align-self: center;
+    width: 10%;
+}
+
+#histqty{
+    align-self: center;
+    width: 10%;
+}
+
+#histcost{
+    align-self: center;
+    width: 10%;
+}
+
+#histdel{
+    align-self: center;
+    width: 15%;
+}
+
+#ccl_dets{
+    align-self: center;
+    width: 100px;
+}
+
+#cancelBTN{
+    font-size: 1.1em;
+    color: red;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+#cancelBTN:hover{
+    border-bottom: 2px solid red;
+}
+

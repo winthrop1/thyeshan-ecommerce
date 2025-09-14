@@ -1,0 +1,41 @@
+# Security - Never commit real credentials
+sql_connection.php
+config.php
+.env
+claude.md
+
+# IDE and System
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+error_log
+access_log
+
+# Session files
+sess_*
+
+# Uploaded files (if any user uploads)
+uploads/
+temp/
+
+# Database dumps with real data
+*.sql
+!L9_HoWinthrop_DB.sql
+
+# Backup files
+*.bak
+*.backup
+*_backup.php
+
+# Test files
+test.php
+phpinfo.php
+*.sh
+server.pid
+

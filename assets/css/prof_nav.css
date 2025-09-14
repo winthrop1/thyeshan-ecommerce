@@ -1,0 +1,21 @@
+#profnav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly ;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#profnav{
+    background-color: #C73131;
+}
+
+#profnav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.7em;
+}
+
+#profnav a:hover{
+    color: yellowgreen;
+}
