@@ -5,7 +5,7 @@
 ### **Running the Application**
 ```bash
 # Navigate to project directory
-cd ECommerce
+cd thyeshan-ecommerce
 
 # Start PHP development server
 php -S localhost:8000
@@ -144,11 +144,6 @@ No database setup required for demonstration!
 - **Session-Based**: Cart persists during session
 - **Responsive**: Works on desktop and mobile browsers
 - **Security**: Includes CSRF protection and input validation
-
-## 🐛 Known Issues
-
-- `checkout.php` has a minor syntax issue when accessed directly (doesn't affect checkout flow)
-- Some legacy code remains from original structure
 
 ## 📧 Support
 
