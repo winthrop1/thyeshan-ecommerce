@@ -133,10 +133,10 @@ The application uses 7 interconnected tables:
 
 ## 🎓 Academic Context
 
-**Institution**: Singapore Polytechnic  
-**Module**: Web Application Development & Security  
+**Institution**: Nanyang Polytechnic  
+**Module**: Open Source Web Solutions Development
 **Year**: 2021-2022  
-**Grade**: Distinction  
+**Grade**: A  
 
 ### Learning Outcomes Demonstrated
 - Full-stack web development without frameworks
@@ -185,13 +185,12 @@ MIT License - See [LICENSE](LICENSE) file
 
 ***REMOVED***
 
-**[Your Name]**  
-Singapore Polytechnic Graduate  
-Seeking Backend Development Internship
+  
+  
 
 
 
-- Email: your.email@example.com
+
 
 ---
 

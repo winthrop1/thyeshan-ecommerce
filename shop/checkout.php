@@ -51,7 +51,7 @@
             else
                 header("Location:cart.php?stt=2");
         }
-    } // Close if ($submit != "")
+     // Close if ($submit != "")
     else {
         // If accessed directly without POST data, show user-friendly message
 ?>
