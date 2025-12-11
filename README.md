@@ -184,15 +184,4 @@ While maintaining the educational nature:
 
 MIT License - See [LICENSE](LICENSE) file
 
-***REMOVED***
-
-  
-  
-
-
-
-
-
----
-
 *This project showcases my understanding of web development fundamentals, security practices, and ability to build complete applications from scratch - skills I'm excited to apply and grow in a professional environment.*
