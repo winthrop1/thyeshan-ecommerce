@@ -47,7 +47,7 @@
         require("includes/nav.php");
         ?>
         <div id="banner">
-            <a href="product.php"><h2>Shop Now</h2></a>
+            <a href="shop/product.php"><h2>Shop Now</h2></a>
         </div>
         <section>
             <div id="popular">
@@ -57,7 +57,7 @@
                                 // Handle both real mysqli results and mock results
                                 while ($top_nine = ($index_list instanceof MockResult) ? $index_list->fetch_assoc() : mysqli_fetch_assoc($index_list)) {?>
                                 <div class="indgrid">
-                                    <a href="product.php"><img src="<?php echo $top_nine['ppic'];?>" alt="product" width="300" height="300"></a>
+                                    <a href="shop/product.php"><img src="<?php echo $top_nine['ppic'];?>" alt="product" width="300" height="300"></a>
                                     <p id="indpron"><?php echo $top_nine['pname']; ?></p>  
                                     </div> 
                             <?php }?>
